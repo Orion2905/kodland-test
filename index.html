@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="header__logo">Not_a_bubble.com</a>
+        
+        <nav class="header__nav">
+            <a href="#" class="header__nav__item active">Home</a>
+            <a href="#" class="header__nav__item">About</a>
+            <a href="#" class="header__nav__item">Sale</a>
+            <a href="#" class="header__nav__item">Contacts</a>
+        </nav>
+        <div class="header__toggle_btn" id="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        
+        <div class="header__dropdown_menu">
+            <nav class="header__dropdown_menu__nav">
+                <a href="#" class="header__dropdown_menu__nav__item active">Home</a>
+                <a href="#" class="header__dropdown_menu__nav__item">About</a>
+                <a href="#" class="header__dropdown_menu__nav__item">Sale</a>
+                <a href="#" class="header__dropdown_menu__nav__item">Contacts</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="home">
+        <div class="home__content">
+            <h1>POP IT!</h1>
+            <p>Best Antistress Toy is the Endless toy <br>bubble wrap!</p>
+            <div class="home__content__btn_box">
+                <a href="">Buy</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="description">
+        
+        <h2 class="description__title">What IS Pop it Exactly</h2>
+        <p>This is a child's game, in which the process can be compared to the bursting of a bubble wrap. But<br>
+            unlike film, pop-it can be pressed with the same characteristic sensations and sounds "endlessly":<br>
+            dozens of silicone bubbles are simply squeezed out in the other direction.</p>
+    </section>
+
+    <section class="buy_area">
+        <h2 class="buy_area__title">Choose your Pop-It!</h2>
+        <div class="buy_area__carousel">
+            <div class="buy_area__carousel__item">
+                <div class="buy_area__carousel__item__card">
+                    <img src="square.png" alt="square" class="buy_area__carousel__item__card__image">
+                    <p>Multicolored square</p>
+                    <div class="buy_area__carousel__item__card__btn_box">
+                        <a href="">Buy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buy_area__carousel__item">
+                <div class="buy_area__carousel__item__card">
+                    <img src="amongus.png" alt="square" class="buy_area__carousel__item__card__image">
+                    <p>Among Us, marbled</p>
+                    <div class="buy_area__carousel__item__card__btn_box">
+                        <a href="">Buy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buy_area__carousel__item">
+                <div class="buy_area__carousel__item__card">
+                    <img src="round.png" alt="square" class="buy_area__carousel__item__card__image">
+                    <p>Multicolored Round</p>
+                    <div class="buy_area__carousel__item__card__btn_box">
+                        <a href="">Buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rules">
+        <div class="rules__content">   
+            <div class="rules__text_area">
+                <h2 class="rules__text_area__title">Rules of the game</h2>
+                <p>Players take turns and click on the bumps. It is imperative to finish the row that you<br>
+                    started. You can press a maximum of 3 bubbles at the same time (they must be near,<br>
+                    you cannot press several pimples at once, if they are not close to each other) The task<br>
+                    is to make the opponent go last. Who went last - he lost!</p>
+            </div>
+            <img src="photo.jpg" alt="rules" class="rules__image">
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <nav class="footer__nav">
+            <a href="#" class="footer__nav__item">not_a_bubble.com</a>
+            <a href="#" class="footer__nav__item">Payment methods</a>
+            <a href="#" class="footer__nav__item">Wholesale</a>
+            <a href="#" class="footer__nav__item">Contacts</a>
+        </nav>
+    </footer>
+
+    <script>
+        const toggleBtn = document.querySelector('.header__toggle_btn')
+        const toggleBtnIcon = document.querySelector('.header__toggle_btn i')
+        const dropdownMenu = document.querySelector('.header__dropdown_menu')
+
+        toggleBtn.onclick = function() {
+            dropdownMenu.classList.toggle('open')
+            const isOpen = dropdownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+
+    </script>
+
+</body>
+</html>
